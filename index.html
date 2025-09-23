@@ -1360,6 +1360,118 @@
             font-size: 15px;
         }
 
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-primary-cta {
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            padding: 18px 36px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+        }
+
+        .btn-primary-cta:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-guide {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            padding: 18px 36px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-guide:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-icon {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-guide:hover .btn-icon,
+        .btn-primary-cta:hover .btn-icon {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .cta-title {
+                font-size: 32px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         /* Footer */
         .footer {
             background: rgba(248, 250, 252, 0.8);
@@ -1367,7 +1479,6 @@
             border-top: 1px solid rgba(0, 0, 0, 0.06);
             padding: 60px 0;
             text-align: center;
-            margin-top: 80px;
         }
 
         .footer p {
@@ -1716,6 +1827,26 @@
                         <p class="feature-subhead">원하는 형식으로 바로 내보내기</p>
                         <p class="feature-body">대시보드를 이미지·CSV 파일로 다운로드합니다. 내부 보고와 광고주 공유에 즉시 활용할 수 있습니다.</p>
                     </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">데이터로 광고 성과를 더 똑똑하게</h2>
+                <p class="cta-description">adly Intelligence로 성과 분석부터 리포팅까지 손쉽게 시작해보세요.</p>
+                <div class="cta-buttons">
+                    <a href="https://adly.co.kr/dashboard" target="_blank" class="btn-primary-cta">
+                        시작하기
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="https://wiki.cjenm.com/display/DBNTMADPLO/18.++Intelligence" target="_blank" class="btn-guide">
+                        가이드 보기
+                        <span class="btn-icon">→</span>
+                    </a>
                 </div>
             </div>
         </div>
